@@ -7,9 +7,20 @@ const App = () => {
   const { connectWallet, address, error, provider } = useWeb3();
   console.log("👋 Address:", address)
 
+  if (!address) {
+    return (
+      <div className="landing">
+        <h1>Welcome to TBDao</h1>
+        <button onClick={() => connectWallet("injected")}
+          Connect your wallet
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="landing">
-      <h1>Welcome to My DAO</h1>
+      <h1>wallet connected!</h1>
     </div>
   );
 };
