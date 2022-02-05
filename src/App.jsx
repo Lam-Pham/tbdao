@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState} from "react";
 
-import { useWeb3 } from "3rdweb/hooks";
+import { useWeb3 } from "@3rdweb/hooks";
 
 const App = () => {
 
@@ -11,7 +11,7 @@ const App = () => {
     return (
       <div className="landing">
         <h1>Welcome to TBDao</h1>
-        <button onClick={() => connectWallet("injected")}
+        <button onClick={() => connectWallet("injected")} className="btn-hero">
           Connect your wallet
         </button>
       </div>
